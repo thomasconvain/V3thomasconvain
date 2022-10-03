@@ -19,7 +19,7 @@
       
   
       <main>
-        <div class="mt-20 pt-10 bg-gradient-to-b from-black to-slate-900 sm:pt-16 lg:pt-8 lg:pb-0 lg:overflow-hidden">
+        <div class="mt-20 pt-10 border-b border-slate-800 bg-gradient-to-b from-black to-slate-900 sm:pt-16 lg:pt-8 lg:pb-0 lg:overflow-hidden">
           <div class="mx-auto max-w-7xl lg:px-8">
             <div class="lg:grid lg:grid-cols-2 lg:gap-8">
               <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
@@ -33,7 +33,7 @@
                     <span class="block">Desarrollador</span>
                     <span class="block text-indigo-400">Front End</span>
                   </h1>
-                  <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">Santiago - Chile<br>Titulado en Francia de NEOMA Business School.<br>Apasionado por las nuevas tecnologías, el desarrollo web y el marketing digital.</p>
+                  <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"><strong>Santiago - Chile</strong><br>Apasionado por las nuevas tecnologías, el diseño UX/UI y desarrollo web</p>
                 </div>
               </div>
               <div class="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">

@@ -13,8 +13,8 @@
         </div>
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex flex-shrink-0 items-center">
-            <img class="block h-8 w-auto lg:hidden" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" />
-            <img class="hidden h-8 w-auto lg:block" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" />
+            <img class="block h-8 w-auto lg:hidden" src="../assets/img/logo.svg" alt="Your Company" />
+            <img class="hidden h-8 w-auto lg:block" src="../assets/img/logo.svg" alt="Your Company" />
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
@@ -37,13 +37,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { ref } from 'vue';
-
-const navigation = [
-  { name: 'Inicio', href: '#', current: true },
-  { name: 'Conóceme', href: '#', current: false },
-  { name: 'Trabajos', href: '#', current: false },
-  { name: 'Contacto', href: '#', current: false },
-]
 
 
 const props = withDefaults(
@@ -72,6 +65,13 @@ const onscrollFn = () => {
 if (process.client) {
 window.onscroll = onscrollFn;
 };
+
+const navigation = [
+  { name: 'Inicio', href: '#', current: false },
+  { name: 'Conóceme', href: '#content', current: false },
+  { name: 'Trabajos', href: '#', current: false },
+  { name: 'Contacto', href: '#', current: false },
+]
 
 </script>
 
