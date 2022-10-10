@@ -49,8 +49,8 @@
           <h1>
             <span class="block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase">Conóceme</span>
             <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Desarrollador Frontend</span>
+            <p class="mt-8 text-xl text-gray-500 leading-8"><strong>¡Hola! Soy Thomas Convain.</strong><br>Soy diseñador Frontend y aprendiz en backend, apasionado por el diseño gráfico, diseño de experiencias e interfaces de usuario. Aficionado de las tecnologías, amo aprender cosas nuevas y desarrollarme en ese rubro.<br> Me mudé de Francia en 2017 y vivo actualmente en Chile. Me encanta la cultura latinoamericana y soy totalmente bilingüe Francés/Español.</p>
           </h1>
-          <p class="mt-8 text-xl text-gray-500 leading-8">Titulado de ingeniería comercial en Francia, me interesé cada vez más en el desarrollo de aplicaciones web, especialmente en los aspectos de diseño.</p>
         </div>
       </div>
     </div>

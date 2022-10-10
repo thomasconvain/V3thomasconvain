@@ -18,7 +18,7 @@
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
-              <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'px-3 py-2 rounded-md text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
+              <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[itemActive === item.id ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'px-3 py-2 rounded-md text-sm font-medium']" :aria-current="itemActive === item.id ? 'page' : undefined">{{ item.name }}</a>
             </div>
           </div>
         </div>
@@ -27,7 +27,7 @@
 
     <DisclosurePanel class="sm:hidden">
       <div class="space-y-1 px-2 pt-2 pb-3">
-        <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="item.href" :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'block px-3 py-2 rounded-md text-base font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
+        <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="item.href" :class="[itemActive === item.id ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'block px-3 py-2 rounded-md text-base font-medium']" :aria-current="itemActive === item.id ? 'page' : undefined">{{ item.name }}</DisclosureButton>
       </div>
     </DisclosurePanel>
   </Disclosure>
@@ -43,16 +43,31 @@ const props = withDefaults(
   defineProps<{
     // distancia desde la cual se mostrará el botón
     scrollToTopDistance?: number,
+    itemActive?: string
   }>(),
   {
     scrollToTopDistance: 20,
+    itemActive: 'home'
   }
 );
 
 // Se accede directamente al elemento 'window' del DOM
 // Y se asigna la funcion onscroll para detectar el scroll de la ventana
+const itemActive = ref('home');
 const updateNavbar = ref(false);
+
 const onscrollFn = () => {
+  let scrollPercent = ((document.documentElement.scrollTop) / (document.documentElement.offsetHeight - window.innerHeight));
+  if (
+    scrollPercent < 0.9
+  ) {
+    itemActive.value = 'home';
+  }
+  if (
+    scrollPercent > 0.9
+  ) {
+    itemActive.value = 'knowme';
+  }
   if (
     document.body.scrollTop > props.scrollToTopDistance ||
     document.documentElement.scrollTop > props.scrollToTopDistance
@@ -67,10 +82,10 @@ window.onscroll = onscrollFn;
 };
 
 const navigation = [
-  { name: 'Inicio', href: '#', current: false },
-  { name: 'Conóceme', href: '#content', current: false },
-  { name: 'Trabajos', href: '#', current: false },
-  { name: 'Contacto', href: '#', current: false },
+  { name: 'Inicio', href: '#', id: 'home' },
+  { name: 'Conóceme', href: '#content', id: 'knowme' },
+  { name: 'Trabajos', href: '#', id: 'works' },
+  { name: 'Contacto', href: '#', id: 'contact' },
 ]
 
 </script>

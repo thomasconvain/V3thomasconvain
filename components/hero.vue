@@ -19,9 +19,9 @@
       
   
       <main>
-        <div class="mt-20 pt-10 border-b border-slate-800 bg-gradient-to-b from-black to-slate-900 sm:pt-16 lg:pt-8 lg:pb-0 lg:overflow-hidden">
-          <div class="mx-auto max-w-7xl lg:px-8">
-            <div class="lg:grid lg:grid-cols-2 lg:gap-8">
+        <div class="h-screen pt-40 border-b border-slate-800 bg-gradient-to-b from-black to-slate-900 sm:pt-28 lg:pt-18 lg:pb-0 lg:overflow-hidden">
+          <div class="h-full mx-auto max-w-7xl lg:px-8">
+            <div class="h-full lg:grid lg:grid-cols-2 lg:gap-8">
               <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
                 <div class="lg:py-24">
                   <a href="#" class="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
@@ -36,8 +36,8 @@
                   <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"><strong>Santiago - Chile</strong><br>Apasionado por las nuevas tecnologías, el diseño UX/UI y desarrollo web</p>
                 </div>
               </div>
-              <div class="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
-                <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
+              <div class="w-full bottom-0 absolute lg:relative">
+                <div class="mx-auto max-w-md px-4 lg:max-w-2xl lg:px-6 lg:px-0">
                   <!-- Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ -->
                   <img class="w-full h-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src="../assets/img/hands.png" alt="" />
                 </div>
