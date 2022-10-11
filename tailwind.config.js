@@ -14,6 +14,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         'hero-pattern': "url('assets/img/hands.png')",
+      },
+      screens: {
+        'tall': { 'raw': '(min-height: 700px)' },
       }
     }
   },
