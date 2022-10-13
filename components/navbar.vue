@@ -1,6 +1,6 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <Disclosure as="nav" :class="{ 'scrolled': updateNavbar }" class="bg-black backdrop-blur border-b border-transparent duration-500 fixed z-20 top-0 left-0 w-full" v-slot="{ open }">
+  <Disclosure as="nav" id="holaa" :class="{ 'scrolled': updateNavbar }" class="bg-black backdrop-blur border-b border-transparent duration-500 fixed z-20 top-0 left-0 w-full" v-slot="{ open }">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-24 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -57,16 +57,14 @@ const itemActive = ref('home');
 const updateNavbar = ref(false);
 
 const onscrollFn = () => {
-  let scrollPercent = ((document.documentElement.scrollTop) / (document.documentElement.offsetHeight - window.innerHeight));
+  //const homeEl = document.getElementById('home');
+  const contentEl = document.getElementById('content').getBoundingClientRect().top;
   if (
-    scrollPercent < 0.9
-  ) {
-    itemActive.value = 'home';
-  }
-  if (
-    scrollPercent > 0.9
+    contentEl < 96
   ) {
     itemActive.value = 'knowme';
+  } else {
+    itemActive.value = 'home';
   }
   if (
     document.body.scrollTop > props.scrollToTopDistance ||

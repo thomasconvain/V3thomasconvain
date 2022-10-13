@@ -1,7 +1,8 @@
 <template>
   <hero/>
-  <div class="container mx-auto" id="content">
+  <div class="" id="content">
     <content-setion/>
+    <logos/>
   </div>
 </template>
 
