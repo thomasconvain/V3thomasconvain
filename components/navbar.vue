@@ -57,14 +57,26 @@ const itemActive = ref('home');
 const updateNavbar = ref(false);
 
 const onscrollFn = () => {
-  //const homeEl = document.getElementById('home');
+  const homeEl = document.getElementById('home').getBoundingClientRect().top;
   const contentEl = document.getElementById('content').getBoundingClientRect().top;
+  const stackEl = document.getElementById('stack').getBoundingClientRect().top;
+  console.log("stack",stackEl)
+  console.log("content",contentEl)
+  console.log("home",homeEl)
   if (
-    contentEl < 96
+    homeEl < 96 && homeEl >= 0
+  ) {
+    itemActive.value = 'home';
+  }
+  if (
+    contentEl < 96 && contentEl > 0
   ) {
     itemActive.value = 'knowme';
-  } else {
-    itemActive.value = 'home';
+  }
+  if (
+    stackEl < 96 && stackEl > 0
+  ) {
+    itemActive.value = 'stack';
   }
   if (
     document.body.scrollTop > props.scrollToTopDistance ||
@@ -82,7 +94,7 @@ window.onscroll = onscrollFn;
 const navigation = [
   { name: 'Inicio', href: '#', id: 'home' },
   { name: 'Conóceme', href: '#content', id: 'knowme' },
-  { name: 'Trabajos', href: '#', id: 'works' },
+  { name: 'Stack de trabajo', href: '#stack', id: 'stack' },
   { name: 'Contacto', href: '#', id: 'contact' },
 ]
 

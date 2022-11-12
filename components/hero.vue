@@ -33,7 +33,7 @@
                     <span class="block">Desarrollador</span>
                     <span class="block text-indigo-400">Front End</span>
                   </h1>
-                  <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"><strong>Santiago - Chile</strong><br>Apasionado por las nuevas tecnologías, el diseño UX/UI y desarrollo web</p>
+                  <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"><strong>Santiago - Chile</strong><br>Diseño y creo aplicaciones web simples e intuitivas. Soy apasionado por lo que hago.</p>
                 </div>
               </div>
               <div class="w-full bottom-0 relative lg:relative">
