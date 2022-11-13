@@ -9,7 +9,7 @@
               <span class="block">Valoro el diseño simple e intuitivo. </span>
             </h2>
             <p class="mt-4 text-lg leading-6 text-indigo-200">Me adapto a los usuarios y a la identidad de cada proyecto.</p>
-            <a href="#" class="mt-8 bg-white border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center text-base font-medium text-indigo-600 hover:bg-indigo-50">Contáctame</a>
+            <button @click="openModal()" class="mt-8 bg-white border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center text-base font-medium text-indigo-600 hover:bg-indigo-50">Contáctame</button>
           </div>
         </div>
         <div class="-mt-16 aspect-w-4 aspect-h-3 md:aspect-w-2 md:aspect-h-1">
@@ -19,3 +19,13 @@
     </div>
   </div>
 </template>
+
+<script setup>
+  const open = ref(true);
+  
+  const emits = defineEmits(["clickBtn"])
+  
+  const openModal = async () => {
+    emits("clickBtn", open.value);
+  };
+</script>
