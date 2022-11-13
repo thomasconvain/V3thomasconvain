@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
       <div>
         <div class="section py-4">
-          <form @submit.prevent="handleSubmit()" id="form">
+          <form name="contact" netlify>
         <div class="grid grid-cols-1 lg:gap-5 gap-0">
         <FormField label="Nombre">
           <input
@@ -46,22 +46,6 @@
 </template>
 
 <script setup>
-// import { async } from '@firebase/util';
 
-// const props = defineProps({
-//   formLoading: {type: Boolean, default: false},
-// });
-
-//   const formState = ref({
-//     name: "",
-//     lastName: "",
-//     profile: "",
-//   });
-  
-//   const emits = defineEmits(["submitForm"])
-  
-//   const handleSubmit = async () => {
-//     emits("submitForm", formState.value);
-//   };
 
 </script>
