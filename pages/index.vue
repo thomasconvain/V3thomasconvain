@@ -1,4 +1,5 @@
 <template>
+  <div>
   <div class="" id="home">
     <hero/>
   </div>
@@ -25,6 +26,7 @@
       </div>
     </Dialog>
   </TransitionRoot>
+</div>
 </template>
 
 <script setup>
