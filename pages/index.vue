@@ -8,6 +8,7 @@
   <div class="" id="stack">
     <logos/>
   </div>
+  <call-to-action/>
 </template>
 
 <script>
