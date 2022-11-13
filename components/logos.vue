@@ -10,12 +10,12 @@
           </div>
 
         </div>
-        <div class="mt-8 grid grid-cols-3 gap-1.5 md:grid-cols-4 lg:mt-0 lg:grid-cols-5">
+        <div class="mt-8 grid grid-cols-4 gap-1.5 md:grid-cols-5 lg:mt-0 lg:grid-cols-6">
           <TransitionGroup name="list">
           <template v-for="item in LogosList" :key="item.name">
-              <div v-if="setId === item.id || setId === ''" class="col-span-1 flex flex-wrap justify-center pt-6 pb-4 px-6 bg-gray-50 rounded-lg">
-                <img class="max-h-12" :src=item.image alt="Workcation" />
-                <p class="text-gray-300 px-2 mt-2 text-xs">{{item.name}}</p>
+              <div v-if="setId === item.id || setId === ''" class="col-span-1 flex flex-wrap justify-center pt-6 pb-4 bg-gray-50 rounded-lg">
+                <img class="max-h-7" :src="item.image" alt="Workcation" />
+                <p class="text-gray-300 text-center mt-2 text-xs min-w-full">{{item.name}}</p>
               </div>
             </template>
           </TransitionGroup>
@@ -34,6 +34,24 @@
 </template>
 
 <script setup>
+import figmaLogo from '../assets/img/figma-logo.svg';
+import whimsicalLogo from '../assets/img/whimsical-logo.png';
+import storybookLogo from '../assets/img/storybook-logo.png';
+import html5Logo from '../assets/img/html5-logo.svg';
+import css3Logo from '../assets/img/css3-logo.svg';
+import vuejsLogo from '../assets/img/vuejs-logo.png';
+import bulmaLogo from '../assets/img/bulma-logo.svg';
+import tailwindLogo from '../assets/img/tailwind-logo.png';
+import saasLogo from '../assets/img/saas-logo.png';
+import jsLogo from '../assets/img/js-logo.png';
+import nodejsLogo from '../assets/img/nodejs-logo.svg';
+import awsLogo from '../assets/img/aws-logo.png';
+import firebaseLogo from '../assets/img/firebase-logo.png';
+import mongoLogo from '../assets/img/mongo-logo.svg';
+import cypressLogo from '../assets/img/cypress-logo.jpeg';
+import droneLogo from '../assets/img/drone-logo.png';
+import circleciLogo from '../assets/img/circle-ci-logo.png';
+
 const Themes = ref([
   {name: 'diseño', id: 'design'},
   {name: 'desarollo', id: 'dev'},
@@ -43,23 +61,23 @@ const Themes = ref([
   {name: 'todo', id: ''},
 ])
 const LogosList= ref([
-  {name: 'Figma', image: '../assets/img/figma-logo.svg', id: 'design'},
-  {name: 'Whimsical', image: '../assets/img/whimsical-logo.png', id: 'design'},
-  {name: 'Storybook', image: '../assets/img/storybook-logo.png', id: 'design'},
-  {name: 'Html5', image: '../assets/img/html5-logo.svg', id: 'dev'},
-  {name: 'CSS3', image: '../assets/img/css3-logo.svg', id: 'dev'},
-  {name: 'VueJs', image: '../assets/img/vuejs-logo.png', id: 'dev'},
-  {name: 'Bulma', image: '../assets/img/bulma-logo.svg', id: 'dev'},
-  {name: 'Tailwind', image: '../assets/img/tailwind-logo.png', id: 'dev'},
-  {name: 'Saas', image: '../assets/img/saas-logo.png', id: 'dev'},
-  {name: 'Javascript', image: '../assets/img/js-logo.png', id: 'dev'},
-  {name: 'NodeJs', image: '../assets/img/nodejs-logo.svg', id: 'dev'},
-  {name: 'AWS', image: '../assets/img/aws-logo.png', id: 'infrastructure'},
-  {name: 'Firebase', image: '../assets/img/firebase-logo.png', id: 'database'},
-  {name: 'MongoDb', image: '../assets/img/mongo-logo.svg', id: 'database'},
-  {name: 'Cypress', image: '../assets/img/cypress-logo.jpeg', id: 'testing'},
-  {name: 'Drone', image: '../assets/img/drone-logo.png', id: 'cicd'},
-  {name: 'Circle CI', image: '../assets/img/circle-ci-logo.png', id: 'cicd'},
+  {name: 'Figma', image: figmaLogo, id: 'design'},
+  {name: 'Whimsical', image: whimsicalLogo, id: 'design'},
+  {name: 'Storybook', image: storybookLogo, id: 'design'},
+  {name: 'Html5', image: html5Logo, id: 'dev'},
+  {name: 'CSS3', image: css3Logo, id: 'dev'},
+  {name: 'VueJs', image: vuejsLogo, id: 'dev'},
+  {name: 'Bulma', image: bulmaLogo, id: 'dev'},
+  {name: 'Tailwind', image: tailwindLogo, id: 'dev'},
+  {name: 'Saas', image: saasLogo, id: 'dev'},
+  {name: 'Javascript', image: jsLogo, id: 'dev'},
+  {name: 'NodeJs', image: nodejsLogo, id: 'dev'},
+  {name: 'AWS', image: awsLogo, id: 'infrastructure'},
+  {name: 'Firebase', image: firebaseLogo, id: 'database'},
+  {name: 'MongoDb', image: mongoLogo, id: 'database'},
+  {name: 'Cypress', image: cypressLogo, id: 'testing'},
+  {name: 'Drone', image: droneLogo, id: 'cicd'},
+  {name: 'Circle CI', image: circleciLogo, id: 'cicd'},
 ])
 
 const setId = ref('')
