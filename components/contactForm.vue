@@ -5,7 +5,8 @@
         <div class="section py-4">
           <form name="contact" action="/form/success" method="POST" data-netlify="true">
         <div class="grid grid-cols-1 lg:gap-5 gap-0">
-        <FormField label="Nombre">
+          <input type="hidden" name="form-name" value="contact" />
+          <FormField label="Nombre">
           <input
             required
             type="text"
