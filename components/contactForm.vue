@@ -3,11 +3,12 @@
     <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
       <div>
         <div class="section py-4">
-          <form name="contact" method="POST">
+          <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
         <div class="grid grid-cols-1 lg:gap-5 gap-0">
-          <input type="hidden" name="form-name" value="contact" />
           <FormField label="Nombre">
           <input
+            name="name"
             required
             type="text"
             class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-4 pr-12 sm:text-sm border-gray-300 rounded-md"

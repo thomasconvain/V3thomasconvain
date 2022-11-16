@@ -1,0 +1,29 @@
+<form name="contact" method="post" netlify netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="contact" />
+<div class="grid grid-cols-1 lg:gap-5 gap-0">
+<FormField label="Nombre">
+<input
+  name="name"
+  required
+  type="text"
+  class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-4 pr-12 sm:text-sm border-gray-300 rounded-md"
+  placeholder="Nombre"
+/>
+</FormField>
+
+<FormField label="Apellido">
+<input
+  required
+  type="text"
+  class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-4 pr-12 sm:text-sm border-gray-300 rounded-md"
+  placeholder="Apellido"
+/>
+</FormField>
+
+<FormField label="Perfil">
+<textarea rows="4" name="comment" id="comment" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" />
+</FormField>
+
+</div>
+
+</form>
