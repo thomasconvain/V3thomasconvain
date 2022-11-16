@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
       <div>
         <div class="section py-4">
-          <form name="contact" method="POST" data-netlify="true">
+          <form name="contact" action="/form/success" method="POST" data-netlify="true">
         <div class="grid grid-cols-1 lg:gap-5 gap-0">
         <FormField label="Nombre">
           <input
