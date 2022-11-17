@@ -69,12 +69,12 @@ const onscrollFn = () => {
     itemActive.value = 'home';
   }
   if (
-    contentEl < 96 && contentEl > 0
+    contentEl <= 96 && contentEl >= 0
   ) {
     itemActive.value = 'knowme';
   }
   if (
-    stackEl < 96 && stackEl > 0
+    stackEl <= 96 && stackEl >= 0
   ) {
     itemActive.value = 'stack';
   }
@@ -95,7 +95,7 @@ const navigation = [
   { name: 'Inicio', href: '#', id: 'home' },
   { name: 'Conóceme', href: '#content', id: 'knowme' },
   { name: 'Stack de trabajo', href: '#stack', id: 'stack' },
-  { name: 'Contacto', href: '#', id: 'contact' },
+  { name: 'Contacto', href: '#contact', id: 'contact' },
 ]
 
 </script>

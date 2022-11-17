@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white">
     <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-      <div class="lg:grid lg:grid-cols-2 lg:items-center">
+      <div class="lg:grid lg:grid-cols-2 lg:items-center min-h-[288px]">
         <div>
           <h2 class="text-2xl font-extrabold text-gray-900 sm:text-3xl">Herramientas y lenguajes que manejo</h2>
           <!-- <p class="mt-3 max-w-3xl text-lg text-gray-500">Valoro el diseño simple e intuitivo. Me adapto a los usuarios y a la identidad de cada proyecto.</p> -->

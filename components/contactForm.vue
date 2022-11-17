@@ -1,13 +1,15 @@
 <template>
   <div class="bg-white">
-    <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="my-6 text-4xl tracking-tight font-extrabold text-gray-900 sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">¿Creamos algo juntos?</h1>
       <div>
         <div class="section py-4">
-          <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+          <form name="contact" @submit.prevent="handleSubmit()" id="form">
             <input type="hidden" name="form-name" value="contact" />
-        <div class="grid grid-cols-1 lg:gap-5 gap-0">
-          <FormField label="Nombre">
+        <div class="grid grid-cols-1 gap-5">
+        <FormField label="Nombre">
           <input
+            v-model="formState.firstName"
             name="name"
             required
             type="text"
@@ -18,6 +20,7 @@
 
         <FormField label="Apellido">
           <input
+            v-model="formState.lastName"
             name="surname"
             required
             type="text"
@@ -26,8 +29,19 @@
           />
         </FormField>
 
-        <FormField label="Perfil">
-          <textarea rows="4" name="comment" id="comment" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" />
+        <FormField label="Correo">
+          <input
+            v-model="formState.replyTo"
+            name="mail"
+            required
+            type="email"
+            class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-4 pr-12 sm:text-sm border-gray-300 rounded-md"
+            placeholder="correo@ejemplo.com"
+          />
+        </FormField>
+
+        <FormField label="message">
+          <textarea v-model="formState.message.html" rows="4" name="comment" id="comment" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" />
         </FormField>
 
       </div>
@@ -36,10 +50,7 @@
           type="submit"
           class="group relative flex justify-center rounded-md w-full border border-transparent bg-indigo-900 mt-4 py-2 px-4 text-sm font-medium text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
           >
-          <svg :class="formLoading ? 'animate-spin' : 'hidden'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
-          </svg>
-          <span :class="!formLoading ? '' : 'hidden'">Enviar</span>
+          <span>Enviar</span>
       </button>
       </form>
         </div>
@@ -50,5 +61,22 @@
 
 <script setup>
 
+  const formState = ref({
+    to: "thomas.convain@gmail.com",
+    replyTo: "",
+    firstName: "",
+    lastName: "",
+    message:{
+      subject: "Nuevo mensaje desde thomasconvain.com",
+      text: "",
+      html: "",
+    }
+  });
+  
+  const emits = defineEmits(["submitForm"])
+  
+  const handleSubmit = async () => {
+    emits("submitForm", formState.value);
+  };
 
 </script>

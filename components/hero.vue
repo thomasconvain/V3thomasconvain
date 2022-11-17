@@ -10,7 +10,7 @@
                 <div class="lg:py-24">
                   <a href="#" class="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
                     <span class="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">¿Tomemos un café?</span>
-                    <span class="ml-4 text-sm">Contáctame</span>
+                    <button @click="openModal()" class="ml-4 text-sm">Contáctame</button>
                     <ChevronRightIcon class="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
                   </a>
                   <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
@@ -35,7 +35,7 @@
     </div>
   </template>
   
-  <script>
+  <script setup>
   import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
   import { ChevronRightIcon } from '@heroicons/vue/24/solid'
   
@@ -45,18 +45,12 @@
     { name: 'Marketplace', href: '#' },
     { name: 'Company', href: '#' },
   ]
+
+  const open = ref(true);
   
-  export default {
-    components: {
-      Popover,
-      PopoverButton,
-      PopoverPanel,
-      ChevronRightIcon,
-    },
-    setup() {
-      return {
-        navigation,
-      }
-    },
-  }
+  const emits = defineEmits(["clickBtn"])
+  
+  const openModal = async () => {
+    emits("clickBtn", open.value);
+  };
   </script>

@@ -15,8 +15,8 @@
   ```
 -->
 <template>
-  <div class="sm:px-20 sm:py-10">
-    <div class="relative sm:max-w-7xl mx-auto sm:my-16 sm:rounded-lg py-16 bg-white sm:shadow-2xl sm:shadow-indigo-400/40 overflow-hidden">
+  <div class="sm:px-8 sm:py-10">
+    <div class="relative sm:max-w-[75.6rem] mx-auto sm:my-16 sm:rounded-lg py-16 bg-white sm:shadow-2xl sm:shadow-indigo-400/40 overflow-hidden">
       <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
         <div class="relative h-full text-lg max-w-prose mx-auto" aria-hidden="true">
           <svg class="absolute top-12 left-full transform translate-x-32" width="404" height="384" fill="none" viewBox="0 0 404 384">
