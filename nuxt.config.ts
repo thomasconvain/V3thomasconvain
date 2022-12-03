@@ -39,7 +39,7 @@ export default defineNuxtConfig({
         ],
         link: [
           // <link rel="stylesheet" href="https://myawesome-lib.css">
-          { rel: 'icon', href: './assets/img/logo-mobile.svg' }
+          { rel: 'icon', href: 'favicon.svg' }
         ],
       }
     }
