@@ -27,4 +27,20 @@ export default defineNuxtConfig({
       },
       transpile: ['@headlessui/vue', '@heroicons/vue'],
     },
+
+    app: {
+      head: {
+        charset: 'utf-8',
+        title: 'Thomas Convain | Desarrollador',
+        meta: [
+          // <meta name="description" content="My amazing site">
+          { name: 'viewport', content: 'width=device-width' },
+          { name: 'description', content: "Desarrollador front-end en Santiago, Chile. Creo aplicaciones web simples e intuitivas. Me adapto a los usuarios y a la identidad de cada proyecto." }
+        ],
+        link: [
+          // <link rel="stylesheet" href="https://myawesome-lib.css">
+          { rel: 'icon', href: './assets/img/logo-mobile.svg' }
+        ],
+      }
+    }
   });
