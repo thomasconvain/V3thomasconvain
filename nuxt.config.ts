@@ -30,6 +30,9 @@ export default defineNuxtConfig({
 
     app: {
       head: {
+        htmlAttrs: {
+          lang: 'es'
+        },
         charset: 'utf-8',
         title: 'Thomas Convain | Desarrollador',
         meta: [
