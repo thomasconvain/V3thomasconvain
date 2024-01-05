@@ -23,7 +23,8 @@
               <div class="w-full bottom-0 relative lg:relative">
                 <div class="mx-auto max-w-md px-4 lg:max-w-2xl lg:px-6 lg:px-0">
                   <!-- Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ -->
-                  <img class="w-full h-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src="../assets/img/hands.png" alt="" />
+                  <!-- <img class="w-full h-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src="../assets/img/hands.png" alt="" /> -->
+                  <canvas class="w-full h-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none" ref="canvas" />
                 </div>
               </div>
             </div>
@@ -38,6 +39,7 @@
   <script setup>
   import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
   import { ChevronRightIcon } from '@heroicons/vue/24/solid'
+  import { Application } from '@splinetool/runtime';
   
   const navigation = [
     { name: 'Product', href: '#' },
@@ -53,4 +55,23 @@
   const openModal = async () => {
     emits("clickBtn", open.value);
   };
+
+// template ref
+const canvas = ref(null)
+
+// spline state
+const state = reactive({
+    spline: {
+        scene: "https://prod.spline.design/ouAwFIjife2lpK87/scene.splinecode",
+        app: null,
+        isLoaded: false,
+    },
+});
+
+onMounted(async () =>{
+    const app = new Application(canvas.value);
+    await app.load(state.spline.scene)
+    state.spline.app = app;
+    state.spline.isLoaded = true;
+})
   </script>
