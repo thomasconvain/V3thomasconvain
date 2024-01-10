@@ -28,7 +28,7 @@
               </div> -->
             </div>
           </div>
-          <canvas class="top-0 absolute opacity-50" ref="canvas" />
+          <canvas class="top-0 absolute opacity-75" ref="canvas" />
         </div>
   
         <!-- More main page content here... -->
