@@ -8,7 +8,7 @@
           </a>
         </div>
         <div class="mt-8 md:mt-0 md:order-1">
-          <p class="text-center text-base text-gray-400">&copy; 2022 Thomas Convain. Todos los derechos reservados</p>
+          <p class="text-center text-base text-gray-400">&copy; 2024 Thomas Convain. Todos los derechos reservados</p>
         </div>
       </div>
     </footer>
