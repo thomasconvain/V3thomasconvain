@@ -56,6 +56,15 @@ const props = withDefaults(
 const itemActive = ref('home');
 const updateNavbar = ref(false);
 
+
+onMounted(async () =>{
+  const homeEl = document.getElementById('home').getBoundingClientRect().top;
+  if (
+    homeEl < 0
+  ) {
+    updateNavbar.value = true;
+  }
+})
 const onscrollFn = () => {
   const homeEl = document.getElementById('home').getBoundingClientRect().top;
   const contentEl = document.getElementById('content').getBoundingClientRect().top;
