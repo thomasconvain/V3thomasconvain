@@ -63,7 +63,7 @@ const canvas = ref(null)
 // spline state
 const state = reactive({
     spline: {
-        scene: "https://prod.spline.design/ZNyVEvdXVyTNsln7/scene.splinecode",
+        scene: "https://prod.spline.design/rgYfzk-yAxELyJwh/scene.splinecode",
         app: null,
         isLoaded: false,
     },

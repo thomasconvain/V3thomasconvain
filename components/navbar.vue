@@ -1,8 +1,8 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <Disclosure as="nav" id="holaa" :class="{ 'scrolled': updateNavbar }" class="border-b border-transparent duration-500 fixed z-50 top-0 left-0 w-full" v-slot="{ open }">
-    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-      <div class="relative flex h-24 items-center justify-between">
+  <Disclosure as="nav" id="holaa" class="border-b border-transparent duration-500 fixed z-50 top-4 left-0 w-full" v-slot="{ open }">
+    <div :class="{ 'scrolled': updateNavbar }" class="mx-2 xl:mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <!-- Mobile menu button-->
           <DisclosureButton class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -112,8 +112,9 @@ const navigation = [
 <style scoped>
 .scrolled {
   background-color:rgb(10 15 27 / 91%);
-  border-bottom: solid #1c2538;
-  border-bottom-width: 1px;
+  border-radius: 50rem;
+  border: solid #1c2538;
+  border-width: 1px;
   --tw-backdrop-blur: blur(8px);
     -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
     backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
