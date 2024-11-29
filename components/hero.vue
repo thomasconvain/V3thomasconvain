@@ -29,6 +29,7 @@
             </div>
           </div>
           <canvas class="top-0 absolute opacity-75" ref="canvas" />
+          <div class="bg-gradient-to-b from-black via-transparent to-slate-900 absolute top-0 w-full h-screen z-40"></div>
         </div>
   
         <!-- More main page content here... -->
