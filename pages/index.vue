@@ -13,7 +13,7 @@
   <call-to-action @clickBtn="openModal"/>
   </div>
   <TransitionRoot as="template" :show="open">
-    <Dialog as="div" class="fixed z-20 inset-0 overflow-y-auto" @close="open = false">
+    <Dialog as="div" class="fixed z-50 inset-0 overflow-y-auto" @close="open = false">
       <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
         <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100" leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
           <DialogOverlay class="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity" />
