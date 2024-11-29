@@ -62,7 +62,7 @@
 <script setup>
 
   const formState = ref({
-    to: "thomas.convain@gmail.com",
+    to: "contacto@thomasconvain.com",
     replyTo: "",
     firstName: "",
     lastName: "",
