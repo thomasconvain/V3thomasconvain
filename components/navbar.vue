@@ -1,7 +1,7 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <Disclosure as="nav" id="holaa" class="border-b border-transparent duration-500 fixed z-50 top-4 left-0 w-full" v-slot="{ open }">
-    <div :class="{ 'scrolled': updateNavbar }" class="mx-2 xl:mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 shadow-lg">
+  <Disclosure as="nav" id="" class="border-b border-transparent duration-500 fixed z-50 top-4 left-0 w-full" v-slot="{ open }">
+    <div :class="{ 'scrolled': updateNavbar }" class="mx-2 xl:mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <!-- Mobile menu button-->
