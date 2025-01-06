@@ -1,21 +1,21 @@
 <template>
   <div class="bg-white">
     <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-      <div class="lg:grid lg:grid-cols-2 lg:items-center min-h-[288px]">
-        <div>
-          <h2 class="text-2xl font-extrabold text-gray-900 sm:text-3xl">Herramientas y lenguajes que manejo</h2>
+      <div class="lg:grid lg:grid-cols-2 lg:items-center min-h-[288px] gap-16">
+        <div class="bg-indigo-50 p-16 rounded-xl">
+          <h2 class="text-4xl font-light text-indigo-900 sm:text-5xl font-serif">Herramientas y lenguajes <span class="font-sans text-4xl font-bold">que manejo</span></h2>
           <!-- <p class="mt-3 max-w-3xl text-lg text-gray-500">Valoro el diseño simple e intuitivo. Me adapto a los usuarios y a la identidad de cada proyecto.</p> -->
-          <div class="mt-8 sm:flex">
-          <button v-for="item in Themes" :key="item.name" type="button" class="mx-1 my-1 inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-full text-indigo-600 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" @click="setId = item.id">{{item.name}}</button>
+          <div class="mt-8 sm:flex flex-wrap gap-1">
+          <button v-for="item in Themes" :key="item.name" type="button" class="mx-1 my-1 inline-flex items-center px-3 py-1.5 border border-transparent text-sm font-medium rounded-xl text-indigo-600 bg-indigo-200 hover:bg-indigo-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" @click="setId = item.id">{{item.name}}</button>
           </div>
 
         </div>
-        <div class="mt-8 grid grid-cols-4 gap-1.5 md:grid-cols-5 lg:mt-0 lg:grid-cols-6">
+        <div class="mt-8 grid grid-cols-3 gap-1.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-4">
           <TransitionGroup name="list">
           <template v-for="item in LogosList" :key="item.name">
               <div v-if="setId === item.id || setId === ''" class="col-span-1 flex flex-wrap justify-center pt-6 pb-4 bg-gray-50 rounded-lg">
-                <img class="max-h-7" :src="item.image" alt="Workcation" />
-                <p class="text-gray-300 text-center mt-2 text-xs min-w-full">{{item.name}}</p>
+                <img class="max-h-10" :src="item.image" alt="Workcation" />
+                <p class="text-gray-400 text-center mt-2 text-xs min-w-full">{{item.name}}</p>
               </div>
             </template>
           </TransitionGroup>
@@ -53,12 +53,12 @@ import droneLogo from '../assets/img/drone-logo.png';
 import circleciLogo from '../assets/img/circle-ci-logo.png';
 
 const Themes = ref([
-  {name: 'diseño', id: 'design'},
-  {name: 'desarollo', id: 'dev'},
-  {name: 'ci/cd', id: 'cicd'},
-  {name: 'infraestructura', id: 'infrastructure'},
-  {name: 'gestión de datos', id: 'database'},
-  {name: 'todo', id: ''},
+  {name: 'Diseño', id: 'design'},
+  {name: 'Desarollo', id: 'dev'},
+  {name: 'CI/CD', id: 'cicd'},
+  {name: 'Infraestructura', id: 'infrastructure'},
+  {name: 'Gestión de datos', id: 'database'},
+  {name: 'Todo', id: ''},
 ])
 const LogosList= ref([
   {name: 'Figma', image: figmaLogo, id: 'design'},

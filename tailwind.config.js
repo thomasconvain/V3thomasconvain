@@ -17,7 +17,11 @@ module.exports = {
       },
       screens: {
         'tall': { 'raw': '(min-height: 700px)' },
-      }
+      },
+      fontFamily: {
+        'sans': ['Jost', 'sans-serif'],
+        'serif': ['Literata', 'serif'],
+      },
     }
   },
   variants: {

@@ -1,6 +1,6 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <Disclosure as="nav" id="" class="border-b border-transparent duration-500 fixed z-50 top-4 left-0 w-full" v-slot="{ open }">
+  <Disclosure as="nav" id="" class="border-b border-transparent duration-500 absolute z-50 top-4 left-0 w-full" v-slot="{ open }">
     <div :class="{ 'scrolled': updateNavbar }" class="mx-2 xl:mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -18,7 +18,8 @@
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
-              <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[itemActive === item.id ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'px-3 py-2 rounded-md text-sm font-medium']" :aria-current="itemActive === item.id ? 'page' : undefined">{{ item.name }}</a>
+              <!-- <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[itemActive === item.id ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'px-3 py-2 rounded-md text-sm font-medium']" :aria-current="itemActive === item.id ? 'page' : undefined">{{ item.name }}</a> -->
+              <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" :aria-current="itemActive === item.id ? 'page' : undefined">{{ item.name }}</a>
             </div>
           </div>
         </div>
@@ -110,13 +111,11 @@ const navigation = [
 </script>
 
 <style scoped>
-.scrolled {
-  background-color:rgb(10 15 27 / 81%);
-  border-radius: 50rem;
-  border: solid #1c2538;
-  border-width: 1px;
+/* .scrolled {
+  background-color:rgba(18, 16, 31, 0.8);
+  border-radius: 1rem;
   --tw-backdrop-blur: blur(8px);
     -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
     backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
+} */
 </style>

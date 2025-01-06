@@ -9,15 +9,15 @@
               <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 text-center lg:px-0 lg:text-left flex items-center">
                 <div class="lg:py-24 z-40 relative">
                   <a href="#" class="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
-                    <span class="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">¿Tomemos un café?</span>
+                    <span class="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-indigo-900 rounded-full">¿Tomemos un café?</span>
                     <button @click="openModal()" class="ml-4 text-sm">Contáctame</button>
                     <ChevronRightIcon class="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
                   </a>
-                  <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                    <span class="block">Desarrollador</span>
-                    <span class="block">Front End</span>
+                  <h1 class="mt-4 text-4xl tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+                    <span class="block font-bold">Desarrollador</span>
+                    <span class="block font-serif font-light">Front End</span>
                   </h1>
-                  <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"><strong>Santiago - Chile</strong><br>Diseño y creo aplicaciones web simples e intuitivas. Soy apasionado por lo que hago.</p>
+                  <p class="mt-3 text-base text-gray-200 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">Diseño y creo aplicaciones web simples e intuitivas. Soy apasionado por lo que hago.</p>
                 </div>
               </div>
               <!-- <div class="w-full relative lg:relative items-center">
@@ -28,8 +28,8 @@
               </div> -->
             </div>
           </div>
-          <canvas class="top-0 absolute opacity-75" ref="canvas" />
-          <div class="bg-gradient-to-b from-black via-transparent to-slate-900 absolute top-0 w-full h-screen z-30"></div>
+          <canvas class="top-0 absolute opacity-90" ref="canvas" />
+          <!-- <div class="bg-gradient-to-b from-black via-transparent to-slate-900 absolute top-0 w-full h-screen z-30"></div> -->
         </div>
   
         <!-- More main page content here... -->
@@ -63,7 +63,7 @@ const canvas = ref(null)
 // spline state
 const state = reactive({
     spline: {
-        scene: "https://prod.spline.design/UK0YQF5RHncGJrnG/scene.splinecode",
+        scene: "https://prod.spline.design/k570T8ghIfOYL-BW/scene.splinecode",
         app: null,
         isLoaded: false,
     },

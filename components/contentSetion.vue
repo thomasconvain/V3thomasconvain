@@ -1,59 +1,55 @@
-<!--
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/typography'),
-    ],
-  }
-  ```
--->
 <template>
-  <div class="sm:px-8 sm:py-10">
-    <div class="relative sm:max-w-[75.6rem] mx-auto sm:my-16 sm:rounded-lg py-16 bg-white sm:shadow-2xl sm:shadow-indigo-400/40 overflow-hidden">
-      <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
-        <div class="relative h-full text-lg max-w-prose mx-auto" aria-hidden="true">
-          <svg class="absolute top-12 left-full transform translate-x-32" width="404" height="384" fill="none" viewBox="0 0 404 384">
-            <defs>
-              <pattern id="74b3fd99-0a6f-4271-bef2-e80eeafdf357" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-              </pattern>
-            </defs>
-            <rect width="404" height="384" fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)" />
-          </svg>
-          <svg class="absolute top-1/2 right-full transform -translate-y-1/2 -translate-x-32" width="404" height="384" fill="none" viewBox="0 0 404 384">
-            <defs>
-              <pattern id="f210dbf6-a58d-4871-961e-36d5016a0f49" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-              </pattern>
-            </defs>
-            <rect width="404" height="384" fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)" />
-          </svg>
-          <svg class="absolute bottom-12 left-full transform translate-x-32" width="404" height="384" fill="none" viewBox="0 0 404 384">
-            <defs>
-              <pattern id="d3eb07ae-5182-43e6-857d-35c643af9034" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-              </pattern>
-            </defs>
-            <rect width="404" height="384" fill="url(#d3eb07ae-5182-43e6-857d-35c643af9034)" />
-          </svg>
-        </div>
+  <div class="bg-gradient-to-b from-indigo-100 to-white py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl lg:text-center">
+        <h2 class="text-base/7 font-semibold text-indigo-600">Conóceme</h2>
+        <p class="mt-2 text-pretty text-5xl font-semibold tracking-tight text-gray-900 sm:text-6xl lg:text-balance font-serif">Transformo tus ideas <br> en experiencias digitales <span class="underline decoration-indigo-600 decoration-wavy">impactantes</span></p>
+        <p class="mt-6 text-lg/8 text-gray-600">Como desarrollador frontend, me especializo en crear interfaces que no solo se ven increíbles, sino que también ofrecen experiencias de usuario intuitivas y funcionales. Combinando diseño gráfico, UX/UI y las últimas tecnologías, trabajo contigo para llevar tus proyectos al siguiente nivel.</p>
       </div>
-      <div class="relative px-4 sm:px-6 lg:px-8">
-        <div class="text-lg max-w-prose mx-auto">
-          <h1>
-            <span class="block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase">Conóceme</span>
-            <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">¡Hola! Soy Thomas Convain.</span>
-            <p class="mt-8 text-xl text-gray-500 leading-8"><strong>¡Mucho gusto!</strong><br>Soy diseñador frontend, apasionado por el diseño gráfico y el diseño UX/UI. Entusiasta de las nuevas tecnologías, curioso por naturaleza, me encanta crecer en el mundo del desarrollo.<br>Soy francés y me vine a Chile en el 2017. Trabajo actualmente como desarrollador en Santiago.<br>Soy totalmente bilingüe Francés/Español.</p>
-          </h1>
-        </div>
+      <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-7xl">
+        <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+          <div v-for="feature in features" :key="feature.name" class="relative pl-16 p-6 bg-indigo-50 rounded-xl hover:shadow-xl">
+            <dt class="text-base/7 font-semibold text-gray-900">
+              <div class="absolute -left-2 -top-3 flex size-10 items-center justify-center rounded-full bg-indigo-600 shadow-md">
+                <component :is="feature.icon" class="size-6 text-white p-2 w-10" aria-hidden="true" />
+              </div>
+              <span class="text-indigo-900">{{ feature.name }}</span>
+            </dt>
+            <dd class="mt-2 text-base/7 text-gray-600">{{ feature.description }}</dd>
+          </div>
+        </dl>
       </div>
     </div>
   </div>
-  </template>
+</template>
+
+<script setup>
+import { RocketLaunchIcon, CodeBracketIcon, GlobeEuropeAfricaIcon, SparklesIcon } from '@heroicons/vue/24/outline'
+
+const features = [
+  {
+    name: 'Especialización en front-end',
+    description:
+      'Diseño interfaces modernas y funcionales, enfocadas en la experiencia del usuario (UX/UI).',
+    icon: CodeBracketIcon,
+  },
+  {
+    name: 'Habilidad en diseño gráfico',
+    description:
+      'Combino creatividad y precisión para crear soluciones visuales atractivas.',
+    icon: SparklesIcon,
+  },
+  {
+    name: 'Enfoque en innovación tecnológica',
+    description:
+      'Me mantengo al día con las últimas tendencias y herramientas para ofrecer resultados de vanguardia.',
+    icon: RocketLaunchIcon,
+  },
+  {
+    name: 'Experiencia internacional',
+    description:
+      'Con raíces en Francia y trabajando en Chile desde 2017, aporto una visión global a tus proyectos.',
+    icon: GlobeEuropeAfricaIcon,
+  },
+]
+</script>
