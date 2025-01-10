@@ -21,11 +21,16 @@ export default defineNuxtConfig({
   },
 
     css: ["@/assets/css/styles.css"],
+
     build: {
-      postcss: {
-        postcssOptions: require("./postcss.config.js"),
-      },
       transpile: ['@headlessui/vue', '@heroicons/vue'],
+    },
+
+    postcss: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
     },
 
     app: {
@@ -45,5 +50,7 @@ export default defineNuxtConfig({
           { rel: 'icon', href: 'favicon.svg' }
         ],
       }
-    }
+  },
+
+  compatibilityDate: '2025-01-10'
   });
