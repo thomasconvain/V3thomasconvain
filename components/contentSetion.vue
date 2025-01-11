@@ -56,7 +56,7 @@ const features = [
   {
     name: 'Experiencia internacional',
     description:
-      'Con raíces en Francia y trabajando en Chile desde 2017, aporto una visión global a tus proyectos.',
+      'Francés y trabajando en Chile desde 2017, aporto una visión global a tus proyectos. Hablo Español, Francés e inglés',
     icon: GlobeEuropeAfricaIcon,
   },
 ]
