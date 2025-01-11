@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     }
   },
 
-    css: ["@/assets/css/styles.css"],
+    css: ["@/assets/css/styles.css", "aos/dist/aos.css"],
 
     build: {
       transpile: ['@headlessui/vue', '@heroicons/vue'],
